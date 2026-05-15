@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#FFD500" />
+  <title>小魔方大师 - 你的 AI 魔方教练</title>
+  <meta name="description" content="专为 9-15 岁孩子打造的 3x3 魔方公式学习平台。OLL / PLL 全收录，3D 演示，趣味闪卡，越练越快。" />
+
+  <!-- 预热 cubing.js CDN：详情页首次加载时基本已就绪 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/cubing@0.55.0/twisty.mjs" crossorigin />
+
+  <!-- 样式（顺序重要：reset → theme → components → pages） -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/theme.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/pages.css" />
+</head>
+<body>
+  <!-- 顶栏 -->
+  <header class="app-header" id="app-header">
+    <a class="brand" href="#/">
+      <span class="brand-cube" aria-hidden="true">🟨</span>
+      <span class="brand-text">小魔方大师</span>
+    </a>
+    <nav class="app-nav" id="app-nav">
+      <a href="#/learn" data-nav="learn">学习</a>
+      <a href="#/practice" data-nav="practice">练习</a>
+      <a href="#/dashboard" data-nav="dashboard">我的</a>
+      <a href="#/pricing" data-nav="pricing" class="nav-pro">Pro</a>
+    </nav>
+  </header>
+
+  <!-- 路由出口 -->
+  <main id="app" class="app-main">
+    <div class="page-loading">加载中…</div>
+  </main>
+
+  <!-- 全局弹窗容器（升级提示、确认框等） -->
+  <div id="modal-root"></div>
+
+  <!-- Toast 容器 -->
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+
+  <!-- 底部 -->
+  <footer class="app-footer">
+    <div>© 2025 小魔方大师 · MVP 版本</div>
+    <div class="footer-links">
+      <a href="#/pricing">Pro 订阅</a>
+      <span>·</span>
+      <a href="mailto:contact@magiccube.app">机构合作</a>
+    </div>
+  </footer>
+
+  <!-- 入口 -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
