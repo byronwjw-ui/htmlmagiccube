@@ -1,0 +1,4 @@
+# 保持 .command 脚本是 LF（Mac 双击需要 Unix 换行）
+启动-Mac.command text eol=lf
+# Windows .bat 用 CRLF
+启动-Windows.bat text eol=crlf
